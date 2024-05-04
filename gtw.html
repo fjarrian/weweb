@@ -1,0 +1,1011 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKN 6 MALANG</title>
+    <style>
+        @font-face {
+    font-family: "Muli";
+    src: url(./muli/Muli.ttf);
+}
+@font-face {
+    font-family: "Prata";
+    src: url(./prata/Prata-Regular.ttf);
+}
+
+
+
+:root {
+    --color-white: white;
+    --bg-color-red: rgb(255, 0, 0);
+    --border: #BBBBBB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/* Header */
+header {
+    width: 100%;
+    height: 35vh;
+}
+header .waktu {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-color-red);
+}
+header .waktu p {
+    margin-left: 30px;
+    font-size: 12px;
+    font-family: Muli, sans-serif;
+    color: var(--color-white);
+}
+header .main-header {
+    width: 100%;
+    height: 75%;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(244, 20, 0);
+}
+header .main-header h1, p{
+    margin-left: 30px;
+}
+header .main-header h1 a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 36px;
+    font-family: Prata, serif;
+}
+header .main-header h1 a:hover {
+    opacity: .8;
+}
+header .main-header p {
+    font-size: 14px;
+    font-family: Muli, serif;
+    color: var(--color-white);
+}
+
+
+/* Navigation Bar */
+nav {
+    width: 100%;
+    height: max-content;
+    background-color: black;
+    color: var(--color-white);
+    display: flex;
+    justify-content: flex-start;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+nav .main-nav {
+    display: flex;
+    width: 100%;
+    margin: 0 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+nav .main-nav .list-nav {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+nav .main-nav .list-nav li {
+    padding: 15px 20px;
+    cursor: pointer;
+    font-family: Muli, sans-serif;
+    position: relative;
+}
+.home {
+    background-color: var(--bg-color-red);
+}
+nav .main-nav .list-nav .il:hover {
+    background-color: var(--bg-color-red);
+    transition: .4s;
+}
+nav .main-nav .list-nav li div ul li:hover a {
+    color: var(--color-white);
+    transition: .4s;
+}
+nav .main-nav li a {
+    color: var(--color-white);
+    font-family: Muli, sans-serif;
+}
+nav .main-nav .inp {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+nav .main-nav .search-field {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    z-index: 8;
+    right: 0;
+    top: 53.5px;
+    display: none;
+}
+nav .main-nav .inp .yeson {
+    display: block;
+    transition: 1s;
+}
+nav .main-nav .inp .search-field .search-input {
+    height: 100%;
+    width: 100%;
+}
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear { 
+    display: none; 
+    width : 0; 
+    height: 0; 
+}
+input[type=search]::-ms-reveal { 
+    display: none; 
+    width : 0; 
+    height: 0; 
+}
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none; 
+}
+form {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px;
+}
+#src {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: var(--color-white);
+    font-size: 25px;
+    background-color: var(--color-white);
+    width: 90%;
+    height: 80%;
+    border-radius: 50px;
+}
+nav .main-nav #bar {
+    display: none;
+}
+/* Menu Profil */
+.menu-profil {
+    width: 180px;
+    background-color: rgb(255, 255, 255);
+    z-index: 9;
+    position: absolute;
+    left: 0;
+    top: 53.5px;
+    display: none;
+}
+.menu-profil ul li {
+    border: 1px solid var(--border);
+    padding: 10px;
+}
+.menu-profil ul li a {
+    font-size: 16px;
+    color: black;
+}
+.profil:hover .menu-profil {
+    display: block;
+
+}
+.menu-profil li:hover {
+    transition: .4s;
+    background-color: var(--bg-color-red);
+}
+
+
+/* Menu Kompetensi Keahlian */
+.menu-keahlian {
+    width: 201.5px;
+    background-color: rgb(255, 255, 255);
+    z-index: 9;
+    position: absolute;
+    left: 0;
+    top: 53.5px;
+    display: none;
+}
+.menu-keahlian ul li {
+    border: 1px solid var(--border);
+    padding: 10px;
+}
+.menu-keahlian ul li a {
+    font-size: 16px;
+    color: black;
+}
+.keahlian:hover .menu-keahlian {
+    display: block;
+}
+.menu-keahlian li:hover {
+    transition: .4s;
+    background-color: var(--bg-color-red);
+}
+
+/* Menu Siswa */
+.menu-siswa {
+    width: max-content;
+    background-color: rgb(255, 255, 255);
+    z-index: 9;
+    position: absolute;
+    left: 0;
+    top: 53.5px;
+    display: none;
+}
+.menu-siswa ul li {
+    border: 1px solid var(--border);
+    padding: 10px;
+}
+.menu-siswa ul li a {
+    font-size: 16px;
+    color: black;
+}
+.siswa:hover .menu-siswa {
+    display: block;
+}
+.menu-siswa li:hover {
+    transition: .4s;
+    background-color: var(--bg-color-red);
+}
+
+/* Menu Alumni */
+.menu-alumni {
+    width: max-content;
+    background-color: rgb(255, 255, 255);
+    z-index: 9;
+    position: absolute;
+    left: 0;
+    top: 53.5px;
+    display: none;
+}
+.menu-alumni ul li {
+    border: 1px solid var(--border);
+    padding: 10px;
+}
+.menu-alumni ul li a {
+    font-size: 16px;
+    color: black;
+}
+.alumni:hover .menu-alumni {
+    display: block;
+}
+.menu-alumni li:hover {
+    transition: .4s;
+    background-color: var(--bg-color-red);
+}
+
+
+/* Main Content */
+/* Trending News */
+main {
+    display: flex;
+    flex-direction: column;
+}
+main .news {
+    display: flex;
+    margin: 15px 0;
+}
+main .news .trending-news {
+    background-color: var(--bg-color-red);
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    width: max-contents;
+    color: var(--color-white);
+    justify-content: center;
+}
+main .news .trending-news p {
+    font-size: 16px;
+    font-family: Prata, serif;
+    font-weight: bold;
+    width: max-content;
+}
+main .news .trending-news p {
+    margin-left: 0;
+}
+main .news .marquee {
+    width: 100%;
+    border: 1px solid black;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 45px;
+}
+.slider img {
+    width: 45px;
+    height: 45px;
+}
+.slider {
+    display: inline-block;
+    animation: 15s slide infinite linear;
+}
+.marquee:hover .slider{
+    animation-play-state: paused;
+}
+.slider div {
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+}
+.slider div span {
+    margin: 0 20px;
+    font-size: 14px;
+    font-family: Muli, sans-serif;
+    font-weight: bold;
+    height: 100%;
+    display: inline-block;
+}
+.slider div span a {
+    color: black;
+}
+.slider div span a:hover {
+    color: var(--bg-color-red);
+}
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Banner News */
+main .banner-news {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+main .banner-news .mini-bannerr {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100%;
+}
+main .banner-news .big-banner {
+    width: calc(50% - 11.25px);
+    height: calc(100% + 2.5px);
+    margin-left: 5px;
+    overflow: hidden;
+}
+main .banner-news .slidee {
+    width: max-content;
+    height: 100%;
+    white-space: nowrap;
+    position: relative;
+    transition: 1s;
+    display: flex;
+    align-items: flex-start;
+}
+main .banner-news .big-banner .slidee .slide1 {
+    width: 625px;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+}
+.arrow {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.arrow span {
+    color: var(--color-white);
+    margin: 0 10px;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0 5px;
+    display: none;
+    cursor: pointer;
+}
+.big-banner:hover .arrow span {
+    display: block;
+}
+.s1 {
+    background-image: url(https://smkn6malang.sch.id/wp-content/uploads/2023/05/goldmedal-2.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: .9;
+}
+.s2 {
+    background-image: url(https://smkn6malang.sch.id/wp-content/uploads/2023/03/sos_polpu1.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .9;
+}
+.s3 {
+    background-image: url(https://smkn6malang.sch.id/wp-content/uploads/2023/01/amaris.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .9;
+}
+.s4 {
+    background-image: url(https://smkn6malang.sch.id/wp-content/uploads/2023/09/puncak-peringatan-lingkungan-2.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .9;
+}
+.big-banner .slidee .slide1 .text-banner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.big-banner .slidee .slide1 .text-banner .title-banner h4 a {
+    font-size: 18px;
+    position: relative;
+    text-wrap: wrap;
+}
+.mini-banner1, .mini-banner2,
+.mini-banner3, .mini-banner4 {
+    margin: 2.5px 0 0 2.5px;
+}
+
+/* 1 */
+main .banner-news .mini-banner1 {
+    background-image: url(https://smkn6malang.sch.id/wp-content/uploads/2023/05/goldmedal-2.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: .9;
+}
+main .banner-news .mini-banner1  {
+    width: calc(50% - 2.5px);
+    height: 200px;
+    margin-top: 0;
+}
+main .banner-news .mini-banner1 .text-banner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* text berita */
+.txt-berita p {
+    color: var(--color-white);
+    background-color: var(--bg-color-red);
+    width: max-content;
+    padding: 1px 7px;
+    border-radius: 15%;
+    font-size: 12px;
+    font-family: Muli, sans-serif;
+    margin-left: 10px;
+}
+.title-banner {
+    margin: 5px 10px 5px 10px;
+}
+.title-banner h4 a {
+    color: var(--color-white);
+    font-size: 16px;
+    font-family: Prata, serif;
+}
+.title-banner h4 a:hover {
+    color: var(--bg-color-red);
+    text-shadow: 0 0 30px black;
+}
+.info-banner {
+    color: var(--color-white);
+    font-family: Muli, sans-serif;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+.info-banner span {
+    margin: 0 20px 5px 0;
+}
+.info-banner span i {
+    margin-right: 5px;
+}
+
+/* 2 */
+main .banner-news .mini-banner2 {
+    background-image: url(https://smkn6malang.sch.id/wp-content/uploads/2023/03/sos_polpu1.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .9;
+
+}
+main .banner-news .mini-banner2  {
+    width: calc(50% - 2.5px);
+    height: 200px;
+    margin-top: 0;
+}
+main .banner-news .mini-banner2 .text-banner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 3 */
+main .banner-news .mini-banner3 {
+    background-image: url(https://smkn6malang.sch.id/wp-content/uploads/2023/01/amaris.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .9;
+}
+main .banner-news .mini-banner3  {
+    width: calc(50% - 2.5px);
+    height: 200px;
+}
+main .banner-news .mini-banner3 .text-banner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 4 */
+main .banner-news .mini-banner4 {
+    background-image: url(https://smkn6malang.sch.id/wp-content/uploads/2023/09/puncak-peringatan-lingkungan-2.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .9;
+}
+main .banner-news .mini-banner4  {
+    width: calc(50% - 2.5px);
+    height: 200px;
+}
+main .banner-news .mini-banner4 .text-banner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: black;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+footer .text-inner {
+    width: calc(100%-60px);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: var(--color-white);
+    padding: 30px 0;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    font-family: Muli, sans-serif;
+}
+footer .text-inner span a {
+    color: #BBBBBB;
+}
+footer .text-inner span a:hover{
+    color: var(--bg-color-red);
+}
+
+
+
+/* Responsive */
+@media only screen and (max-width: 971px) {
+    nav .main-nav {
+        height: 53.5px;
+        display: flex;
+        align-items: center;
+    }
+    nav .main-nav .list-nav {
+        display: none;
+    }
+    nav .main-nav #bar {
+        display: block;
+    }
+    main .news {
+        flex-wrap: wrap;
+    }
+    main .news .trending-news {
+        width: 100%;
+    }
+    .slider {
+        animation-duration: 50s;
+    }
+    main .banner-news {
+        height: max-content;
+        width: 100%;
+    }
+    main .banner-news .big-banner {
+        width: calc(100% - 10px);
+        height: 350px;
+        margin-bottom: 5px;
+    }
+    main .banner-news .mini-bannerr {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+    }
+    .mini-banner1 {
+        width: 100%;
+        height: 400px;
+    }
+}
+    </style>
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
+</head>
+<body>
+    
+    <nav>
+        <section class="main-nav">
+            <ul class="list-nav">
+                <li class="il home"><a href="index.html"><i class="fa fa-house"></i></a></li>
+                <li class="il ln profil">Profil
+                    <div class="menu-profil">
+                        <ul>
+                            <li><a href="https://smkn6malang.sch.id/visi-dan-misi/">Visi dan Misi</a></li>
+                            <li><a href="https://smkn6malang.sch.id/sejarah-singkat/">Sejarah Singkat</a></li>
+                            <li><a href="">Humas</a></li>
+                            <li><a href="https://smkn6malang.sch.id/sarana-dan-prasarana/">Sarana dan Prasarana</a></li>
+                            <li><a href="https://smkn6malang.sch.id/kepala-sekolah/">Sambutan Kepala Sekolah</a></li>
+                            <li><a href="https://smkn6malang.sch.id/kemitraan/">Kemitraan</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="il ln keahlian">Kompetensi Keahlian
+                    <div class="menu-keahlian">
+                        <ul>
+                            <li><a href="https://smkn6malang.sch.id/desain-pemodelan-dan-informasi-bangunan/">DPIB</a></li>
+                            <li><a href="https://smkn6malang.sch.id/konstruksi-jalan-irigasi-dan-jembatan/">KJIJ</a></li>
+                            <li><a href="https://smkn6malang.sch.id/category/tki/tkj/">TKJ</a></li>
+                            <li><a href="https://smkn6malang.sch.id/category/tki/rpl/">RPL</a></li>
+                            <li><a href="https://smkn6malang.sch.id/category/tki/sija/">SIJA</a></li>
+                            <li><a href="https://smkn6malang.sch.id/teknik-kendaraan-ringan-otomotif/">TKRO</a></li>
+                            <li><a href="https://smkn6malang.sch.id/teknik-ototronik/">TOT</a></li>
+                            <li><a href="https://smkn6malang.sch.id/teknik-alat-berat/">TAB</a></li>
+                            <li><a href="https://smkn6malang.sch.id/teknik-instalasi-tenaga-listrik/">TITL</a></li>
+                            <li><a href="https://smkn6malang.sch.id/teknik-pemesinan/">TPM</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="il ln siswa">Siswa
+                    <div class="menu-siswa">
+                        <ul>
+                            <li><a href="https://smkn6malang.sch.id/prestasi-siswa/">Prestasi Siswa</a></li>
+                            <li><a href="https://smkn6malang.sch.id/beasiswa/">Beasiswa</a></li>
+                            <li><a href="https://smkn6malang.sch.id/extrakulikuler/">Ekstrakurikuler</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="il ln alumni">Alumni
+                    <div class="menu-alumni">
+                        <ul>
+                            <li><a href="https://smkn6malang.sch.id/category/lowongan-kerja/">Lowongan Kerja</a></li>
+                            <li><a href="https://smkn6malang.sch.id/category/rekrutmen/">Rekrutmen</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="il"><a href="https://smkn6malang.sch.id/category/berita/">Berita</a></li>
+                <li class="il"><a href="https://smkn6malang.sch.id/lokasi/">Lokasi</a></li>
+            </ul>
+            <div class="inp">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="search-field">
+                    <div class="search-input">
+                        <form action="get">
+                            <input type="search" name="src" id="src">
+                            <i class="fa-solid fa-xmark"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <i class="fa-solid fa-bars" id="bar"></i>
+        </section>
+    </nav>
+
+    <header>
+        <section class="waktu"><p>Tuesday, 9 September 2023</p></section>
+        <section class="main-header">
+            <h1><a href="index.html">SMK Negri 6 Malang</a></h1>
+            <p>Maju Berkelanjutan</p>
+        </section>
+    </header>
+
+
+
+    
+    <main>
+        <section class="news">
+            <div class="trending-news">
+                <i class="fa-solid fa-bolt-lightning"></i>
+                <p>Trending News</p>
+            </div>
+            <div class="marquee">
+                <div class="slider">
+                    <div>
+                        <img src="https://smkn6malang.sch.id/wp-content/uploads/2023/05/goldmedal-2.jpeg" alt="">
+                        <span><a href="https://smkn6malang.sch.id/2023/05/22/smarthome-karya-siswa-menangkan-myia-2023/">Smarthome Karya Siswa Menangkan MYIA 2023</a></span>
+                    </div>
+                    <div>
+                        <img src="https://smkn6malang.sch.id/wp-content/uploads/2023/03/sos_polpu1.jpeg" alt="">
+                        <span><a href="https://smkn6malang.sch.id/2023/03/02/sosialisasi-politeknik-pekerjaan-umum-semarang/">Sosialisasi Politeknik Pekerjaan Umum Semarang</a></span>
+                    </div>
+                    <div>
+                        <img src="https://smkn6malang.sch.id/wp-content/uploads/2023/01/amaris.jpeg" alt="">
+                        <span><a href="https://smkn6malang.sch.id/2023/01/11/program-beasiswa-pkl-dan-magang-ikatan-kerja-dengan-amaris-hotel-malang/">Program Beasiswa PKL dan Magang Ikatan Kerja dengan Amaris Hotel Malang</a></span>
+                    </div>
+                    <div>
+                        <img src="https://smkn6malang.sch.id/wp-content/uploads/2023/09/puncak-peringatan-lingkungan-2.jpeg" alt="">
+                        <span><a href="https://smkn6malang.sch.id/2023/09/08/puncak-peringatan-hari-lingkungan-hidup-sedunia-2023-provinsi-jawa-timur/">Puncak Peringatan Hari Lingkungan Hidup Sedunia 2023 Provinsi Jawa Timur</a></span>
+                    </div>
+                    
+                </div>
+            <div class="slider">
+                    <div>
+                        <img src="https://smkn6malang.sch.id/wp-content/uploads/2023/05/goldmedal-2.jpeg" alt="">
+                        <span><a href="https://smkn6malang.sch.id/2023/05/22/smarthome-karya-siswa-menangkan-myia-2023/">Smarthome Karya Siswa Menangkan MYIA 2023</a></span>
+                    </div>
+                    <div>
+                        <img src="https://smkn6malang.sch.id/wp-content/uploads/2023/03/sos_polpu1.jpeg" alt="">
+                        <span><a href="https://smkn6malang.sch.id/2023/03/02/sosialisasi-politeknik-pekerjaan-umum-semarang/">Sosialisasi Politeknik Pekerjaan Umum Semarang</a></span>
+                    </div>
+                    <div>
+                        <img src="https://smkn6malang.sch.id/wp-content/uploads/2023/01/amaris.jpeg" alt="">
+                        <span><a href="https://smkn6malang.sch.id/2023/01/11/program-beasiswa-pkl-dan-magang-ikatan-kerja-dengan-amaris-hotel-malang/">Program Beasiswa PKL dan Magang Ikatan Kerja dengan Amaris Hotel Malang</a></span>
+                    </div>
+                    <div>
+                        <img src="https://smkn6malang.sch.id/wp-content/uploads/2023/09/puncak-peringatan-lingkungan-2.jpeg" alt="">
+                        <span><a href="https://smkn6malang.sch.id/2023/09/08/puncak-peringatan-hari-lingkungan-hidup-sedunia-2023-provinsi-jawa-timur/">Puncak Peringatan Hari Lingkungan Hidup Sedunia 2023 Provinsi Jawa Timur</a></span>
+                    </div>
+                    
+                </div></div>
+        </section>
+
+        <section class="banner-news">
+            <div class="big-banner">
+                <div class="slidee" style="left: -1250px;">
+                    <div class="slide1 s1">
+                        <div class="arrow">
+                            <span class="prev">≪</span>
+                            <span class="next">≫</span>
+                        </div>
+                        <div class="text-banner">
+                            <div class="txt-berita">
+                                <p>Berita</p>
+                            </div>
+                            <div class="title-banner">
+                                <h4><a href="https://smkn6malang.sch.id/2023/05/22/smarthome-karya-siswa-menangkan-myia-2023/">Smarthome Karya Siswa Menangkan MYIA 2023</a></h4>
+                            </div>
+                            <div class="info-banner">
+                                <span><i class="fa-regular fa-calendar-days"></i>May 22, 2023</span>
+                                <span><i class="fa-regular fa-clock"></i>2 min read</span>
+                                <span><i class="fa-solid fa-user"></i>Habib Asyhari</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide1 s2">
+                        <div class="arrow">
+                            <span class="prev">≪</span>
+                            <span class="next">≫</span>
+                        </div>
+                        <div class="text-banner">
+                            <div class="txt-berita">
+                                <p>Berita</p>
+                            </div>
+                            <div class="title-banner">
+                                <h4><a href="https://smkn6malang.sch.id/2023/03/02/sosialisasi-politeknik-pekerjaan-umum-semarang/">Sosialisasi Politeknik Pekerjaan Umum Semarang</a></h4>
+                            </div>
+                            <div class="info-banner">
+                                <span><i class="fa-regular fa-calendar-days"></i>January 11, 2023</span>
+                                <span><i class="fa-regular fa-clock"></i>1 min read</span>
+                                <span><i class="fa-solid fa-user"></i>Habib Asyhari</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide1 s3">
+                        <div class="arrow">
+                            <span class="prev">≪</span>
+                            <span class="next">≫</span>
+                        </div>
+                        <div class="text-banner">
+                            <div class="txt-berita">
+                                <p>Berita</p>
+                            </div>
+                            <div class="title-banner">
+                                <h4><a href="https://smkn6malang.sch.id/2023/01/11/program-beasiswa-pkl-dan-magang-ikatan-kerja-dengan-amaris-hotel-malang/">Program Beasiswa PKL dan Magang Ikatan Kerja dengan Amaris Hotel Malang</a></h4>
+                            </div>
+                            <div class="info-banner">
+                                <span><i class="fa-regular fa-calendar-days"></i>March 2, 2023</span>
+                                <span><i class="fa-regular fa-clock"></i>1 min read</span>
+                                <span><i class="fa-solid fa-user"></i>Habib Asyhari</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide1 s4">
+                        <div class="arrow">
+                            <span class="prev">≪</span>
+                            <span class="next">≫</span>
+                        </div>
+                        <div class="text-banner">
+                            <div class="txt-berita">
+                                <p>Berita</p>
+                            </div>
+                            <div class="title-banner">
+                                <h4><a href="https://smkn6malang.sch.id/2023/09/08/puncak-peringatan-hari-lingkungan-hidup-sedunia-2023-provinsi-jawa-timur/">Puncak Peringatan Hari Lingkungan Hidup Sedunia 2023 Provinsi Jawa Timur</a></h4>
+                            </div>
+                            <div class="info-banner">
+                                <span><i class="fa-regular fa-calendar-days"></i>September 8, 2023</span>
+                                <span><i class="fa-regular fa-clock"></i>1 min read</span>
+                                <span><i class="fa-solid fa-user"></i>Habib Asyhari</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mini-bannerr">
+                <div class="mini-banner1">
+                    <div class="text-banner">
+                        <div class="txt-berita">
+                            <p>Berita</p>
+                        </div>
+                        <div class="title-banner">
+                            <h4><a href="https://smkn6malang.sch.id/2023/05/22/smarthome-karya-siswa-menangkan-myia-2023/">Smarthome Karya Siswa Menangkan MYIA 2023</a></h4>
+                        </div>
+                        <div class="info-banner">
+                            <span><i class="fa-regular fa-calendar-days"></i>May 22, 2023</span>
+                            <span><i class="fa-regular fa-clock"></i>2 min read</span>
+                            <span><i class="fa-solid fa-user"></i>Habib Asyhari</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-banner2">
+                    <div class="text-banner">
+                        <div class="txt-berita">
+                            <p>Berita</p>
+                        </div>
+                        <div class="title-banner">
+                            <h4><a href="https://smkn6malang.sch.id/2023/03/02/sosialisasi-politeknik-pekerjaan-umum-semarang/">Sosialisasi Politeknik Pekerjaan Umum Semarang</a></h4>
+                        </div>
+                        <div class="info-banner">
+                            <span><i class="fa-regular fa-calendar-days"></i>January 11, 2023</span>
+                            <span><i class="fa-regular fa-clock"></i>1 min read</span>
+                            <span><i class="fa-solid fa-user"></i>Habib Asyhari</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-banner3">
+                    <div class="text-banner">
+                        <div class="txt-berita">
+                            <p>Berita</p>
+                        </div>
+                        <div class="title-banner">
+                            <h4><a href="https://smkn6malang.sch.id/2023/01/11/program-beasiswa-pkl-dan-magang-ikatan-kerja-dengan-amaris-hotel-malang/">Program Beasiswa PKL dan Magang Ikatan Kerja dengan Amaris Hotel Malang</a></h4>
+                        </div>
+                        <div class="info-banner">
+                            <span><i class="fa-regular fa-calendar-days"></i>March 2, 2023</span>
+                            <span><i class="fa-regular fa-clock"></i>1 min read</span>
+                            <span><i class="fa-solid fa-user"></i>Habib Asyhari</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-banner4">
+                    <div class="text-banner">
+                        <div class="txt-berita">
+                            <p>Berita</p>
+                        </div>
+                        <div class="title-banner">
+                            <h4><a href="https://smkn6malang.sch.id/2023/09/08/puncak-peringatan-hari-lingkungan-hidup-sedunia-2023-provinsi-jawa-timur/">Puncak Peringatan Hari Lingkungan Hidup Sedunia 2023 Provinsi Jawa Timur</a></h4>
+                        </div>
+                        <div class="info-banner">
+                            <span><i class="fa-regular fa-calendar-days"></i>September 8, 2023</span>
+                            <span><i class="fa-regular fa-clock"></i>1 min read</span>
+                            <span><i class="fa-solid fa-user"></i>Habib Asyhari</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="text-inner">
+            <span>All Rights Reserved 2021.</span>
+            <span><a href="https://wordpress.org/" target="_blank">Proudly powered by WordPress</a> | Theme: Engage Mag by <a href="https://www.candidthemes.com/" target="_blank">Candid Themes.</a></span>
+        </div>
+    </footer>
+
+<script >// input search
+    const searchIcon = document.querySelector('.fa-magnifying-glass');
+    const searchField = document.querySelector('.search-field');
+    const xmark = document.querySelector('.fa-xmark');
+    const searchInput = document.querySelector('#src');
+    
+    searchIcon.addEventListener('click', function() {
+        searchField.classList.toggle('yeson');
+    });
+    xmark.addEventListener('click', function() {
+        searchInput.value = '';
+    });
+    // trending news
+    const trendSlide = document.querySelector('.slider').cloneNode(true);
+    document.querySelector('.marquee').appendChild(trendSlide);
+    
+    // slide news
+    const slider = document.querySelectorAll('.slide1').length;
+    const pSlide = document.querySelector('.slidee');
+    const bigBanner = document.querySelector('.slide1');
+    const next = document.querySelectorAll('.next');
+    const prev = document.querySelectorAll('.prev');
+    let count = 1;
+    let bigBannerWidth = bigBanner.offsetWidth;
+    
+    let nextSlide = function() {
+        if(count < slider) {
+            pSlide.style.left = '-' + (count * bigBannerWidth) + 'px';
+            count++;
+            clearTimeout(time);
+        } else if(count = slider) {
+            pSlide.style.left = '0px';
+            count = 1;
+        }
+    }
+    let prevSlide = function() {
+        if(count > 1) {
+          count = count - 2;
+          pSlide.style.left = '-' + (count * bigBannerWidth) + 'px';
+          count++;
+        } else if(count = 1) {
+            count = slider - 1;
+            pSlide.style.left = '-' + (count * bigBannerWidth) + 'px';
+            count++;
+        }
+    }
+    let time = setTimeout(function() {
+        pSlide.style.left = '0px';
+    }, 1)
+    setInterval(function() {
+        nextSlide();
+    }, 5000)
+    next.forEach(function(e) {
+        e.addEventListener('click', function() {
+            nextSlide();
+        });
+    });
+    prev.forEach(function(e) {
+        e.addEventListener('click', function() {
+            prevSlide();
+        });
+    });</script>
+
+</body></html>
